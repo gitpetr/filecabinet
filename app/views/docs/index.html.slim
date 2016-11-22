@@ -2,3 +2,6 @@
   h2= link_to doc.title, doc
   p= time_ago_in_words(doc.created_at)
   p= truncate(strip_tags(doc.content), length: 200)
+  p= link_to "Edit", edit_doc_path(doc), class: 'btn btn-default'
+  p= link_to 'Delete', doc, method: :delete,  data: {confirm: 'Насовсем?'}, class: 'btn btn-default'
+  p= link_to 'new doc', new_doc_path, class: 'btn btn-primary'
