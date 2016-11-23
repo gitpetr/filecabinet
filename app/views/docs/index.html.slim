@@ -4,7 +4,7 @@
       - @docs.each do |doc|
         = link_to doc do
           .doc
-            h2= doc.title
+            h2.title= doc.title
             p.date= time_ago_in_words(doc.created_at)
             p.content= truncate(strip_tags(doc.content), length: 200)
     - else
